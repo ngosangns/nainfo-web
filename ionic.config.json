@@ -1,0 +1,7 @@
+{
+  "name": "nainfo-web",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
