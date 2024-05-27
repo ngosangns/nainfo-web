@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="updateProfile()">
+    <ion-list>
+      <!-- Add input fields for editable profile properties -->
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input
+          type="text"
+          name="name"
+          [(ngModel)]="profile.name"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input
+          type="text"
+          name="description"
+          [(ngModel)]="profile.description"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          type="email"
+          name="email"
+          [(ngModel)]="profile.email"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input
+          type="text"
+          name="address"
+          [(ngModel)]="profile.address"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Facebook</ion-label>
+        <ion-input
+          type="text"
+          name="facebook"
+          [(ngModel)]="profile.facebook"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Linkedin</ion-label>
+        <ion-input
+          type="text"
+          name="linkedin"
+          [(ngModel)]="profile.linkedin"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Github</ion-label>
+        <ion-input
+          type="text"
+          name="github"
+          [(ngModel)]="profile.github"
+        ></ion-input>
+      </ion-item>
+      <!-- ... other fields like description, address, etc. -->
+    </ion-list>
+
+    <ion-button type="submit" expand="block">Save Changes</ion-button>
+  </form>
+</ion-content>

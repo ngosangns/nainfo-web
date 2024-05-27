@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner *ngIf="loading"></ion-spinner>
+  <div *ngIf="errorMessage" class="error-message" style="padding: 20px">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!errorMessage && profile && !loading" class="profile-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ profile.name }}</ion-card-title>
+        <ion-card-subtitle>{{ profile.email }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Description: {{ profile.description }}</p>
+        <p>Address: {{ profile.address }}</p>
+        <p>Facebook: {{ profile.facebook }}</p>
+        <p>Github: {{ profile.github }}</p>
+        <!-- Display other profile details as needed -->
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" [routerLink]="['/edit-profile']">
+      Edit Profile
+    </ion-button>
+  </div>
+</ion-content>
